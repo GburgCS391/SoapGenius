@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/GridLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:columnCount="7"
+    android:orientation="horizontal" >
+
+    <Button
+        android:id="@+id/cancel"
+        android:layout_gravity="left"
+        android:layout_rowSpan="10"
+        android:text="Cancel" />
+
+    <Space
+        android:layout_column="6"
+        android:layout_gravity="fill_vertical"
+        android:layout_row="13" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_column="5"
+        android:layout_gravity="center_horizontal|top"
+        android:layout_row="0"
+        android:text="Next" />
+
+    <RadioButton
+        android:id="@+id/radioButton2"
+        android:layout_column="1"
+        android:layout_gravity="left|top"
+        android:layout_row="4"
+        android:text="KOH (liquid soap)" />
+
+    <CheckBox
+        android:id="@+id/checkBox1"
+        android:layout_column="1"
+        android:layout_gravity="center_horizontal|top"
+        android:layout_row="5"
+        android:text="90%KOH" />
+
+    <RadioButton
+        android:id="@+id/radioButton1"
+        android:layout_column="1"
+        android:layout_gravity="center_horizontal|top"
+        android:layout_row="1"
+        android:text="NaOH (bar soap) " />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_column="1"
+        android:layout_gravity="center"
+        android:layout_marginLeft="25dp"
+        android:layout_row="0"
+        android:text="Type of Lye" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_column="2"
+        android:layout_gravity="center"
+        android:layout_marginLeft="29dp"
+        android:layout_row="0"
+        android:text="@string/oilweigh" />
+
+    <RadioButton
+        android:id="@+id/radioButton3"
+        android:layout_column="2"
+        android:layout_gravity="right|top"
+        android:layout_row="4"
+        android:text="Pounds" />
+
+    <RadioButton
+        android:id="@+id/radioButton4"
+        android:layout_column="2"
+        android:layout_gravity="right|top"
+        android:layout_row="5"
+        android:text="Ounces" />
+
+    <RadioButton
+        android:id="@+id/radioButton5"
+        android:layout_column="2"
+        android:layout_gravity="right|top"
+        android:layout_row="1"
+        android:text="Grams  " />
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="88dp"
+        android:layout_column="2"
+        android:layout_gravity="right|top"
+        android:layout_row="6"
+        android:ems="10"
+        android:hint="amount"
+        android:inputType="numberDecimal" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_column="0"
+        android:layout_gravity="left|top"
+        android:layout_row="6"
+        android:text="Home" />
+
+</GridLayout>
