@@ -1,5 +1,5 @@
 package edu.gettysburg.cs391.soapproto;
-
+//team project
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
