@@ -12,7 +12,7 @@ import android.widget.ProgressBar;
 
 public class StepTwo extends Activity {
 
-	private static final int ACTION_STATE = 25;
+	private static final int ACTION_STATE = 25; //used to fill progress bar
 	private float mx1, mx2, my1, my2;
 	private ProgressBar pBar;
 	
@@ -41,10 +41,12 @@ public class StepTwo extends Activity {
 		case MotionEvent.ACTION_UP:
 			mx2 = e.getX();
 			my2 = e.getY();
+			//swipe to move left, aka back a page
 			if(mx2 > mx1){ finish();}
 
-
+			//swipe to move right, forward a page
 			if(mx2 < mx1) {
+				//advancing to the next page in the tutorial
 				Intent intent =new Intent(StepTwo.this, StepThree.class);
 				startActivity(intent);
 			}
