@@ -12,4 +12,4 @@ Gettysburg College, Spring 2014, CS391: User Interface Design and Implementation
   
   
 
-Team Members: Darren McAuliffe, Tim Cook, Wei Xiong and Theresa Houtz.
+Team Members: Darren McAuliffe '14, Tim Cook '15, Wei Xiong '15, and Theresa Houtz '15.
