@@ -6,11 +6,9 @@ import java.util.ArrayList;
 
 import android.app.Activity;
 import android.app.Dialog;
-import android.content.Context;
 import android.content.Intent;
-import android.graphics.drawable.AnimationDrawable;
+import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.AttributeSet;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -21,31 +19,37 @@ public class MainActivity extends Activity {
 	/**
 	 * Reference to the ImageView which will display the animation.
 	 */
+
 	private static final String SOAPOIL_INPUT = "soapoil.txt";
 	ImageView animation;
-	private Button bncrtsoap;
+	private Button bncrtsoap, tutor;
 	private ArrayList<Ingredient> inList;
+	private SharedPreferences prefs = null;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
-		bncrtsoap = (Button) findViewById(R.id.button1);
-
 		loadSoapOil();
+		bncrtsoap = (Button) findViewById(R.id.crtsoap);
+		tutor = (Button) findViewById(R.id.button3);
 
 		bncrtsoap.setOnClickListener(new OnClickListener(){
 
 			public void onClick(View v){
 				openPageOne();
 			}
-		});
-		/*
-		 * NOTE: It's not possible to start the animation during the onCreate.
-		 */
-	}
+		});     
+		tutor.setOnClickListener(new OnClickListener(){
 
+			public void onClick(View v){
+				tutorial();
+			}
+		}); 
+
+
+	}
 
 	public ArrayList<Ingredient> loadSoapOil(){
 		//store only the non-calculated pieces in the database
@@ -53,6 +57,13 @@ public class MainActivity extends Activity {
 		return inList;
 
 	}
+
+	public void tutorial(){
+
+		Intent intent = new Intent(MainActivity.this, TutorialOpening.class);
+		startActivity(intent);
+	}
+
 	public void openPageOne(){
 
 		final Dialog dialog = new Dialog(this);
@@ -109,7 +120,7 @@ public class MainActivity extends Activity {
 
 		dialog.show();
 	}
-	
+
 	private void toNewRecipe()
 	{
 		Intent intent = new Intent(this, IngredientAct.class);
@@ -117,7 +128,35 @@ public class MainActivity extends Activity {
 	}
 
 
-	/*This is all animation code, do not delete but please leave alone. 
+	/**
+	 * Working on automated "first time" tutorial start
+	 * 
+	 SharedPreferences prefs = null;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        // Perhaps set content view here
+
+        prefs = getSharedPreferences("com.mycompany.myAppName", MODE_PRIVATE);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        if (prefs.getBoolean("firstrun", true)) {
+            // Do first run stuff here then set 'firstrun' as false
+            // using the following line to edit/commit prefs
+            prefs.edit().putBoolean("firstrun", false).commit();
+        }
+    }
+
+
+	 */
+
+	/* ********************************************************************************************************** */
+	/**This is all animation code, do not delete but please leave alone. 
 	 * 
 	 * public class Loader extends ImageView {
     public Loader(Context context, AttributeSet attrs, int defStyle) {
