@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">SoapProto</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="NewSoap">"Create a New Recipe "</string>
+    <string name="BrowseSoaps">Browse Your Recipes</string>
+    <string name="SoapGen">Soap Genius!!</string>
+    <string name="Tutor">Tutorial</string>
+    <string name="oilweigh">Weight of Oils</string>
+    <string name="percent">%</string>
+    <string name="superfat"></string>
+    <string name="superfatt">Super Fat</string>
+    <string name="frag">Fragrence</string>
+    <string name="amt">Amount</string>
+    <string name="ozlb">Oz/Lb</string>
+    <string name="title_activity_ingredient">IngredientAct</string>
+    <string name="WelcomeSG">Welcome to Soap Genius!!</string>
+    <string name="intro">This is a quick tutorial to help familiarize you with our app where we will cover important information regarding the setup and syntax of the app.</string>
+    <string name="started">Let\'s get started!!</string>
+    <string name="finishTitle">You are ready to be a Soap Genius!</string>
+    <string name="Done">Congratulations you\'ve finished the tutorial!</string>
+    <string name="repeat">If you want to repeat the tutorial, you will find a tutorial button on the homepage.</string>
+
+</resources>
